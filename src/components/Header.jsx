@@ -10,7 +10,8 @@ const Header = ({
   setData,
 }) => {
   const handleSubmit = (e) => {
-   
+
+   e.preventDefault()
     setSearch(value);
     setValue("");
   };
@@ -52,7 +53,7 @@ const Header = ({
       </button>
 
       <div
-        className="offcanvas offcanvas-end"
+        className="offcanvas offcanvas-end esas"
         tabIndex="-1"
         id="offcanvasRight"
         aria-labelledby="offcanvasRightLabel"
@@ -76,7 +77,7 @@ const Header = ({
                   <li className="li m-3" key={index}>
                     <img className="card-img-top m-2" src={item.Poster} />
                     {item.Title.slice(0,30)}... {item.Year}
-                    <button onClick={() => handleDelete(index)}>Delete</button>
+                    <button className="butn" onClick={() => handleDelete(index)}>Delete</button>
                   </li>
                 );
               })

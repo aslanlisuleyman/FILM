@@ -24,12 +24,9 @@ function Cards({ value, search, setWishList, wishList, data, setData }) {
             <div className="card-body">
               <h4 className="card-title">{item.Title}</h4>
               <p className="card-text">{item.Year}</p>
-              <a
-                onClick={() => {
-                  addToWishList(item);
-                }}
-                className="btn "
-              >
+              <a onClick={()=>{
+                addToWishList(item)
+              }} className="btn ">
                 <i className="fa-solid fa-heart"></i>
               </a>
             </div>

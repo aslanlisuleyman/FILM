@@ -88,3 +88,12 @@ input:focus {
   width: 50px;
   height: 40px;
 }
+.butn{
+  background-color:rgb(84, 16, 148);
+  color: aliceblue;
+}
+.esas{
+  background-color: rgb(227, 197, 255);
+  color: rgb(46, 9, 46);
+}
+
