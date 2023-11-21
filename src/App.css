@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(84, 16, 148);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+nav{
+  width: 600px;
+  border-radius: 6px;
+  height: 55px;
+}
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  padding: 10px;
+  text-align: center;
+  height: 41px;
+}
+.form input{
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+}
+.form button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 150px;
+  height: 30px;
+  border: 1px solid rgb(84, 16, 148);
+  color:rgb(84, 16, 148);
+}
+.cards{
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.card{
+  width: 300px;
+  background-color: rgb(84, 16, 148);
+  color: white;
+}
+.card img{
+  height: 350px;
+}
+.card a{
+
+  background-color: rgb(179, 110, 243);
+  color: aliceblue;
+}
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.btnn{
+  background-color: white;
+  color:rgb(84, 16, 148) ;
+}
+.btnn:hover{
+  background-color: white;
+  color:rgb(84, 16, 148) ;
+}
+
+.li{
+
+  list-style: none;
+
+}
+.li img{
+  width: 50px;
+  height: 40px;
+}
