@@ -8,10 +8,11 @@ function App() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   const [search, setSearch] = useState("harry");
-  const [wishList, setWishList] = useState(localStorage.getItem("wishlist") ? JSON.parse(localStorage.getItem("wishlist")): []
+  const [wishList, setWishList] = useState(
+    localStorage.getItem("wishlist")
+      ? JSON.parse(localStorage.getItem("wishlist"))
+      : []
   );
-
-  
 
   return (
     <>
@@ -21,10 +22,18 @@ function App() {
         setSearch={setSearch}
         setWishList={setWishList}
         wishList={wishList}
-        data={data} setData={setData}
+        data={data}
+        setData={setData}
         search={search}
       />
-      <Cards search={search} setWishList={setWishList} wishList={wishList} data={data} setData={setData} value={value}  />
+      <Cards
+        search={search}
+        setWishList={setWishList}
+        wishList={wishList}
+        data={data}
+        setData={setData}
+        value={value}
+      />
     </>
   );
 }

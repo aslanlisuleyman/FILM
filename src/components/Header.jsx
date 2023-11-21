@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-const Header = ({ value, setValue, search,setSearch, setWishList, wishList,data,setData }) => {
+const Header = ({
+  value,
+  setValue,
+  search,
+  setSearch,
+  setWishList,
+  wishList,
+  data,
+  setData,
+}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearch(value);
@@ -51,20 +60,20 @@ const Header = ({ value, setValue, search,setSearch, setWishList, wishList,data,
           ></button>
         </div>
         <div className="offcanvas-body off">
-          {wishList.length !== 0 ? (
-            wishList.map((item,index) => {
-              return (
-                <ul className="ul" key={index}>
-                <li className="li" >
-                  
-                  <img className="card-img-top" src={item.Poster} />
-                  {item.Title}  {item.Year}
-                </li></ul>
-              );
-            })
-          ) : (
-            <h1>Səbətiniz boşdur</h1>
-          )}
+          <ul className="ul">
+            {wishList.length !== 0 ? (
+              wishList.map((item, index) => {
+                return (
+                  <li className="li m-3" key={index}>
+                    <img className="card-img-top m-2" src={item.Poster} />
+                    {item.Title.slice(0,20)}... {item.Year}
+                  </li>
+                );
+              })
+            ) : (
+              <h1>Səbətiniz boşdur</h1>
+            )}
+          </ul>
         </div>
       </div>
     </div>
