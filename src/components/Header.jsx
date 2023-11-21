@@ -10,9 +10,18 @@ const Header = ({
   setData,
 }) => {
   const handleSubmit = (e) => {
-    e.preventDefault();
+   
     setSearch(value);
     setValue("");
+  };
+
+
+  const handleDelete = (index) => {
+    const updatedWishList = [...wishList];
+  updatedWishList.splice(index, 1);
+  setWishList(updatedWishList);
+  localStorage.setItem("wishlist", JSON.stringify(updatedWishList));
+   
   };
   return (
     <div className="header">
@@ -66,7 +75,8 @@ const Header = ({
                 return (
                   <li className="li m-3" key={index}>
                     <img className="card-img-top m-2" src={item.Poster} />
-                    {item.Title.slice(0,20)}... {item.Year}
+                    {item.Title.slice(0,30)}... {item.Year}
+                    <button onClick={() => handleDelete(index)}>Delete</button>
                   </li>
                 );
               })
