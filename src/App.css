@@ -80,20 +80,33 @@ input:focus {
 }
 
 .li{
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+  padding-right: 35px;
+   text-align: center;
+}
 
-}
-.li img{
-  width: 50px;
-  height: 40px;
-}
 .butn{
   background-color:rgb(84, 16, 148);
   color: aliceblue;
+  width: 170px;
+  height: 35px;
+  border-radius: 10px;
+  margin-left: 10px;
 }
 .esas{
   background-color: rgb(227, 197, 255);
   color: rgb(46, 9, 46);
 }
 
+.ul img{
+  border-radius: 30px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+.butn:hover{
+  background-color: rgb(164, 67, 255);
+}
